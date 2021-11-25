@@ -1,3 +1,8 @@
+###############################################################################################
+#                   Script to Preprocess tissue rse data "Sliding window" study               #
+#                                    (SCZ samples only)                                       #
+###############################################################################################
+
 options(java.parameters = "-Xmx8000m")  #Required for xlsx package
 library(SummarizedExperiment)           # check this link: https://f1000research.com/articles/6-1558/v1 , https://www.bioconductor.org/packages/release/bioc/vignettes/SummarizedExperiment/inst/doc/SummarizedExperiment.html
 library(recount)                        # check this paper https://www.nature.com/articles/nbt.3838
