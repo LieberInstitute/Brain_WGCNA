@@ -16,10 +16,19 @@
 * [Enrichment Visualisation.R](enrich_and_plot/Enrichment%20Visualisation.R): Script to plot main enrichment plots for SCZ risk modules for all networks. Script to plot GO enrichment plots for SCZ risk modules for all networks. Script to plot TF enrichment plots for SCZ risk modules for all networks. Script to plot other Pathology enrichment plots for SCZ risk modules for all networks
 
 ### For the "Cell population enrichment" study:
-* [matched-sample-HP-DG(Code1).R](cell_population_enrichment/matched-sample-HP-DG(Code1).R): Preprocess sample match rse data for HP-DG
+* [matched-sample-HP-DG(Code1).R](cell_population_enrichment/matched-sample-HP-DG(Code1).R): Preprocess samples match rse data for HP-DG
 * [matched-sample-HP-DG(Code2,noqsva).R](cell_population_enrichment/matched-sample-HP-DG(Code2%2Cnoqsva).R): Remove confounders effect
 * [matched-sample-HP-DG(Code2,qsva).R](cell_population_enrichment/matched-sample-HP-DG(Code2%2Cqsva).R):  Remove confounders effect + QSV
 * [matched-sample-HP-DG(Code3,noqsva).R](cell_population_enrichment/matched-sample-HP-DG(Code3%2Cnoqsva).R): Estimate beta for WGCNA via connectivity match 
 * [matched-sample-HP-DG(Code3,qsva).R](cell_population_enrichment/matched-sample-HP-DG(Code3%2Cqsva).R): Estimate beta for WGCNA via connectivity match [QSVA pipeline]
-* [matched-sample-HP-DG(Code4,noqsva).R](cell_population_enrichment/matched-sample-HP-DG(Code4%2Cnoqsva).R): Perform WGCNA to obtain age-parsed and non-parsed networks
-* [matched-sample-HP-DG(Code4,qsva).R](cell_population_enrichment/matched-sample-HP-DG(Code4%2Cqsva).R): Perform WGCNA to obtain age-parsed and non-parsed networks [QSVA pipeline]
+* [matched-sample-HP-DG(Code4,noqsva).R](cell_population_enrichment/matched-sample-HP-DG(Code4%2Cnoqsva).R): Perform WGCNA to obtain samples match HP-DG networks
+* [matched-sample-HP-DG(Code4,qsva).R](cell_population_enrichment/matched-sample-HP-DG(Code4%2Cqsva).R): Perform WGCNA to obtain samples match HP-DG networks [QSVA pipeline]
+
+### For the "Sliding age windows" study:
+* [sliding_window(Code1,SCZ).R](sliding_windows/sliding_window(Code1%2CSCZ).R): Preprocess tissue rse data (SCZ samples only)
+* [sliding_window(Code2,SCZ).R](sliding_windows/sliding_window(Code2%2CSCZ).R): Remove confounders effect
+* [sliding_window(Code3,NC).R](sliding_windows/sliding_window(Code3%2CNC).R): Arrange samples in sliding age windows and estimate beta for WGCNA via connectivity match (NC samples only)
+* [sliding_window(Code3,SCZ).R](sliding_windows/sliding_window(Code3%2CSCZ).R): Arrange samples in sliding age windows and estimate beta for WGCNA via connectivity match (SCZ samples only)
+* [sliding_window(Code4,NC).R](sliding_windows/sliding_window(Code4%2CNC).R): Perform WGCNA to obtain sliding window networks on the NC samples
+* [sliding_window(Code4,SCZ).R](sliding_windows/sliding_window(Code4%2CSCZ).R): Perform WGCNA to obtain sliding window networks on the SCZ samples
+* [Enrichments and Visualisation(Sliding Window).R](sliding_windows/enrich_and_plot/Enrichments%20and%20Visualisation(Sliding%20Window).R): Script to plot SCZ enrichment measures for sliding window networks (NC + SCZ)
