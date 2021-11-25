@@ -1,3 +1,10 @@
+###############################################################################################
+#                             Script to create shoffle/KO networks                            #
+#                Script to Estimate beta for WGCNA via connectivity match                     #
+#                                  iPSC data[shuffle/KO]                                      #
+###############################################################################################
+
+
 #Get sft
 get_sft_parameters = function(rse, mod, net.type, assay.name, nname){
   input_matrix = t(assays(rse)[[assay.name]]) #Genes in columns, subjects in rows
