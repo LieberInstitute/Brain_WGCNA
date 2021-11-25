@@ -1,3 +1,9 @@
+###############################################################################################
+#                Script to Estimate beta for WGCNA via connectivity match                     #
+#                                   iPSC data[noKO]                                           #
+###############################################################################################
+
+
 library(dynamicTreeCut)
 library(fastcluster)
 library(WGCNA)
