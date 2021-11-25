@@ -1,3 +1,10 @@
+####################################################################################################
+# Script to  Combine WGCNA network output (module assignments, connectivity etc) in a single file  #
+#                      "Regional-coexpression","Age-period" and "Cell Population" sttudies         #
+#                                   (NC samples only)                                              #
+####################################################################################################
+
+
 library(purrr)
 library(SummarizedExperiment)
 library(WGCNA)
