@@ -1,3 +1,9 @@
+#################################################################
+#                  Function for GO enrichment                   #
+#            modified from clusterProfiler::enrichGO            #  
+#################################################################
+
+
 #### GO enrichment ####
 enrichGO_custom = function (gene, OrgDb, keyType = "ENTREZID", ont = "MF", pvalueCutoff = 0.05, 
                             pAdjustMethod = "BH", universe, qvalueCutoff = 0.2, minGSSize = 10, 
