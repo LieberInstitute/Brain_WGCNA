@@ -1,3 +1,11 @@
+###############################################################################################
+#                 Script to estimate beta for WGCNA based on connecitivity match              #
+#                      "Regional-coexpression" and "Age-period" studies                       #
+#                                   (NC samples only)                                         #
+###############################################################################################
+
+
+
 library(dynamicTreeCut)
 library(fastcluster)
 library(WGCNA)
