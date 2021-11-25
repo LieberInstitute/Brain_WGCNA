@@ -1,3 +1,10 @@
+####################################################################################################
+#                Script to Get a gene_module_list for all networks from the wide_data_file         #
+#                                to be used for enrichment analysis                                #
+#           "Regional-coexpression", "Age-period" and "Cell-population enrichment" studies         #
+#                                                                                                  #
+####################################################################################################
+
 library(dplyr)
 library(tidyr)
 library(MASS)
