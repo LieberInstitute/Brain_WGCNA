@@ -36,7 +36,7 @@
 * [Enrichments and Visualisation(Sliding Window).R](sliding_windows/enrich_and_plot/Enrichments%20and%20Visualisation(Sliding%20Window).R): Script to plot SCZ enrichment measures for sliding window networks (NC + SCZ)
 
 
-### For iPSC data analysis:
+### For the iPSC data analysis:
 * [stemcell(Code1).R](stemcells/stemcell(Code1).R): Prepare and preprocess iPSC data
 * [stemcell(Code2).R](stemcells/stemcell(Code2).R): Remove confounders effect
 * [stemcell(Code3)[noKO].R](stemcells/stemcell(Code3)%5BnoKO%5D.R): Estimate beta for WGCNA via connectivity match
