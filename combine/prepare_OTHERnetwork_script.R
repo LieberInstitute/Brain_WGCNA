@@ -1,3 +1,10 @@
+####################################################################################################
+#               Script to  collage and combine  network data from other published networks         #
+#                                "Regional-coexpression" study                                     #
+#                                                                                                  #
+####################################################################################################
+
+
 library(purrr)
 library(SummarizedExperiment)
 library(WGCNA)
