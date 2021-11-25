@@ -1,3 +1,9 @@
+###############################################################################################
+#                       Script to Perform WGCNA to obtain sliding window networks             #
+#                                     "Sliding window" study                                  #
+#                                       (SCZ samples only)                                    #
+###############################################################################################
+
 library(dynamicTreeCut)
 library(fastcluster)
 library(WGCNA)
