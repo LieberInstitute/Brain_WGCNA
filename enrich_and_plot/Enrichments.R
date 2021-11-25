@@ -1,3 +1,17 @@
+####################################################################################################
+#                    Script to run various enrichments on gene_module_list:                        #
+#                   SCZ, DEGs, DMGs, TWAS, GO, MAGMA, Cell Specificity etc.                        #
+#                                                                                                  #
+#                  Script to make sankey plots for DLPFC, HP and CN SCZ risk genes.                #
+#                                                                                                  #
+#                  Script to make binwise PGC3 enrichment scatterplots for networks.               #
+#                                                                                                  #
+#                          Prepare and format data for other visualisations                        #
+#           "Regional-coexpression", "Age-period" and "Cell-population enrichment" studies         #
+#                                                                                                  #
+####################################################################################################
+ 
+
 ##Function to get gene annotation from Biomart
 geneMap_fun = function(genes, ensembl, attributes){
   require(biomaRt)
