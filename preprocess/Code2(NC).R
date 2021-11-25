@@ -1,3 +1,12 @@
+###############################################################################################
+#                        Script to clean confounder effcts                                    #
+#                      "Regional-coexpression" and "Age-period" studies                       #
+#                                   (NC samples only)                                         #
+###############################################################################################
+
+
+
+
 library(sva)
 library(jaffelab)
 set.seed(123)
