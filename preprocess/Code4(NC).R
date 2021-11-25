@@ -1,3 +1,11 @@
+###############################################################################################
+#                               Script to generate WGCNA networks and save output             #
+#                      "Regional-coexpression" and "Age-period" studies                       #
+#                                   (NC samples only)                                         #
+###############################################################################################
+
+
+
 library(dynamicTreeCut)
 library(fastcluster)
 library(WGCNA)
