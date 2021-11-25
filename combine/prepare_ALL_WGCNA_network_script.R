@@ -1,3 +1,11 @@
+####################################################################################################
+#      Script to Combine WGCNA output from our networks and other previous published networks      #
+#           "Regional-coexpression", "Age-period" and "Cell-population enrichment" studies         #
+#                                                                                                  #
+####################################################################################################
+
+
+
 new.names = read.csv("C:\\Users\\mpariha1\\Desktop\\upload_to_google_drive\\OneDrive - Johns Hopkins\\Shared Data\\Giulio's ML code\\Enrichments\\old-to-new Network names all.csv") %>% tibble::deframe()
 
 all_networks = list(
