@@ -1,3 +1,8 @@
+###############################################################################################
+#                          Script to Perform WGCNA to obtain iPSC networks                    #
+#                                   iPSC data[shuffle/KO]                                     #
+###############################################################################################
+
 library(dynamicTreeCut)
 library(fastcluster)
 library(WGCNA)
