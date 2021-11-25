@@ -1,3 +1,12 @@
+###############################################################################################
+#            Script to Arrange samples in sliding age windows and estimate beta for WGCNA     #
+#                                      via connectivity match                                 # 
+#                                                                                             #
+#                                     "Sliding window" study                                  #
+#                                     (SCZ samples only)                                      #
+###############################################################################################
+
+
 library(dynamicTreeCut)
 library(fastcluster)
 library(WGCNA)
