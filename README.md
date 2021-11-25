@@ -3,10 +3,10 @@
 ## *Schizophrenia risk genes converge into shifting co-expression networks across brain development, ageing and brain regions*
 
 ### For the "Regional-coexpression" and "Age-period" studies (NC samples only): 
-* [Code1(NC).R](Code1(NC).R): Preprocess tissue rse data
-* [Code2(NC).R](Code2(NC).R): Remove confounders effect
-* [Code3(NC).R](Code3(NC).R): Estimate beta for WGCNA via connectivity match
-* [Code4(NC).R](Code4(NC).R): Perform WGCNA to obtain age-parsed and non-parsed networks 
+* [Code1(NC).R](preprocess/Code1(NC).R): Preprocess tissue rse data
+* [Code2(NC).R](preprocess/Code2(NC).R): Remove confounders effect
+* [Code3(NC).R](preprocess/Code3(NC).R): Estimate beta for WGCNA via connectivity match
+* [Code4(NC).R](preprocess/Code4(NC).R): Perform WGCNA to obtain age-parsed and non-parsed networks 
 * [prepare_WGCNAnetwork_script.R](combine/prepare_WGCNAnetwork_script.R): Combine WGCNA network output (module assignments, connectivity etc) in a single file
 * [prepare_OTHERnetwork_script.R](combine/prepare_OTHERnetwork_script.R): Preprocess and collate network data from various published networks
 * [prepare_ALL_WGCNA_network_script.R](combine/prepare_ALL_WGCNA_network_script.R): Combine WGCNA output from our networks and other previous published networks
