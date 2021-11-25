@@ -1,3 +1,10 @@
+#################################################################
+#         Function for MAGMA enrichment preprocessing           #
+#              Annotation and Gene Analysis steps               #  
+#################################################################
+
+
+
 #### MAGMA enrich preprocess ####
 MAGMA_enrich_preprocess = function(genemap,pathology,target.directory = paste0(getwd(),"/"),output.directory = paste0(getwd(),"/"), magma.directory = paste0(getwd(),"/")){
   
