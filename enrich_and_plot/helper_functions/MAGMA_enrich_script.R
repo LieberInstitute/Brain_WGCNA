@@ -1,3 +1,9 @@
+#################################################################
+#          Function for MAGMA enrichment processing             #
+#                Gene Level Analysis steps                      #  
+#################################################################
+
+
 #### MAGMA enrich ####
 MAGMA_enrich = function(Net,pathology, Net_name,genemap,target.directory = getwd(),output.directory,magma.directory = NULL){
   require(future);require(furrr);require(purrr)
