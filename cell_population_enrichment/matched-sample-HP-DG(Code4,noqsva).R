@@ -1,3 +1,10 @@
+####################################################################################################
+#                   Script to erform WGCNA to obtain samples match HP-DG networks                  #
+#                               "Cell-population enrichment" studies                               #
+#                                       [noQSVA pipeline]                                          #
+####################################################################################################
+
+
 library(dynamicTreeCut)
 library(fastcluster)
 library(WGCNA)
