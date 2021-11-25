@@ -1,6 +1,6 @@
 #################################################################
 #          Function for MAGMA enrichment processing             #
-#                Gene Level Analysis steps                      #  
+#                Gene Level Analysis step                       #  
 #################################################################
 
 
