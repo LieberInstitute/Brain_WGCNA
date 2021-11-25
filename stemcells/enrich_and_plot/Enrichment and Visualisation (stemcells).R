@@ -1,3 +1,9 @@
+###############################################################################################
+# Script to plot enrichment in PGC lists vs enrichment in consensus list in stemcell networks #
+#                                iPSC data[noKO+shuffle/KO]                                   #
+###############################################################################################
+
+
 Enrich = function(ll.target, ll.components, ll.components.size, network_name, target_name){
   ###ll.components.size argument is not needed
   
