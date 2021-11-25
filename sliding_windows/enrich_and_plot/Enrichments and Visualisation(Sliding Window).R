@@ -254,7 +254,7 @@ p.smooth =  dat %>% ggplot(aes(x=median.age, y=val, group = network, color = tis
    geom_smooth(data = dat %>% filter( tissue %in% "dentate"), method = "loess",aes(group = interaction(Dx,tissue), color = tissue, fill = tissue, linetype = Dx), span= 0.65 , alpha = 0.2, size = 1.1) + 
    geom_smooth(data = dat %>% filter(!tissue %in% "dentate"), method = "loess",aes(group = interaction(Dx,tissue), color = tissue, fill = tissue, linetype = Dx), span= 0.5  , alpha = 0.2, size = 1.1) + 
   facet_grid(bins ~Dx) + 
-  theme_bw(base_size = 19)  + theme(strip.text = element_text(size = 15, face = "bold")) + xlab(label = "Fold")
+  theme_bw(base_size = 19)  + theme(strip.text = element_text(size = 15, face = "bold")) + ylab(label = "Fold")
 p.smooth
 
 ##Max Fold change (smooth plot)
@@ -262,7 +262,7 @@ p.max = dat %>% ggplot(aes(x=median.age, y=max, group = network, color = tissue)
   geom_smooth(data = dat %>% filter( tissue %in% "dentate"), method = "loess",aes(group = interaction(Dx,tissue), fill = tissue, color = tissue, linetype = Dx), span = 0.65, alpha = 0.2, size = 1.1) +
   geom_smooth(data = dat %>% filter(!tissue %in% "dentate"), method = "loess",aes(group = interaction(Dx,tissue), fill = tissue, color = tissue, linetype = Dx), span = 0.5 , alpha = 0.2, size = 1.1) + 
   facet_grid(bins~Dx) + 
-  theme_bw(base_size = 19)  + theme(strip.text = element_text(size = 15, face = "bold")) + xlab(label = "Max")
+  theme_bw(base_size = 19)  + theme(strip.text = element_text(size = 15, face = "bold")) + ylab(label = "Max")
 p.max
 
 
