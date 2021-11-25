@@ -1,3 +1,10 @@
+####################################################################################################
+# Script to Create a combined wide_data_file with WGCNA output from our and other networks,        #
+#                               plus genestats, MAGMA stats etc                                    #
+#           "Regional-coexpression", "Age-period" and "Cell-population enrichment" studies         #
+#                                                                                                  #
+####################################################################################################
+
 library(purrr)
 #library(SummarizedExperiment)
 #library(WGCNA)
