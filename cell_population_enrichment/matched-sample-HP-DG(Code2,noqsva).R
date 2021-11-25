@@ -1,3 +1,10 @@
+####################################################################################################
+#                                Script to Remove confounders effect                               #
+#                               "Cell-population enrichment" studies                               #
+#                                        [noQSVA pipeline]                                         #
+####################################################################################################
+
+
 library(sva)
 library(jaffelab)
 set.seed(123)
