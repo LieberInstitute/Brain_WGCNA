@@ -1,3 +1,9 @@
+####################################################################################################
+#                      Script to Estimate beta for WGCNA via connectivity match                    #
+#                               "Cell-population enrichment" studies                               #
+#                                         [QSVA pipeline]                                          #
+####################################################################################################
+
 library(dynamicTreeCut)
 library(fastcluster)
 library(WGCNA)
