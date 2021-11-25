@@ -1,3 +1,10 @@
+###############################################################################################
+#       Script to calculate and plot SCZ enrichment measures for sliding window networks      #
+#                                     "Sliding window" study                                  #
+#                                        (NC+SCZ samples)                                     #
+###############################################################################################
+
+
 #Function to perform hypergeometric enrichment on genesets
 Enrich = function(ll.target, ll.components){
   ###ll.components.size argument is not needed
