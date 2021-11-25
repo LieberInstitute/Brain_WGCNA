@@ -1,3 +1,10 @@
+####################################################################################################
+#             Script to plot main enrichment plots for SCZ risk modules for all networks           #
+#        Script to plot GO, TF and Pathology enrichments for SCZ risk modules for all networks     #
+#           "Regional-coexpression", "Age-period" and "Cell-population enrichment" studies         #
+#                                                                                                  #
+####################################################################################################
+
 library(limma)
 library(gtools)
 
