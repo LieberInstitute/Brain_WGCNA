@@ -1,5 +1,5 @@
 ####################################################################################################
-#               Script to  collage and combine  network data from other published networks         #
+#               Script to  collate and combine  network data from other published networks         #
 #                                "Regional-coexpression" study                                     #
 #                                                                                                  #
 ####################################################################################################
