@@ -12,8 +12,16 @@
 * [prepare_ALL_WGCNA_network_script.R](combine/prepare_ALL_WGCNA_network_script.R): Combine WGCNA output from our networks and other previous published networks
 * [new_wide_form_data_script.R](combine/new_wide_form_data_script.R): Create a combined wide_data_file with WGCNA output from our and other networks, plus genestats, MAGMA stats etc
 * [get_gene_module_list script.R](combine/get_gene_module_list%20script.R): Get a gene_module_list for all networks from the wide_data_file to be used for enrichment analysis
-* [Enrichments.R](enrich_and_plot/Enrichments.R): Script to run various enrichments on gene_module_list: SCZ, DEGs, DMGs, TWAS, GO, MAGMA, Cell Specificity etc. Script to make sankey plots for DLPFC, HP and CN SCZ risk genes. Script to make binwise PGC3 enrichment scatterplots for networks. Prepare and format data for other visualisations
-* [Enrichment Visualisation.R](enrich_and_plot/Enrichment%20Visualisation.R): Script to plot main enrichment plots for SCZ risk modules for all networks. Script to plot GO enrichment plots for SCZ risk modules for all networks. Script to plot TF enrichment plots for SCZ risk modules for all networks. Script to plot other Pathology enrichment plots for SCZ risk modules for all networks
+* [Enrichments.R](enrich_and_plot/Enrichments.R):
+  - Script to run various enrichments on gene_module_list: SCZ, DEGs, DMGs, TWAS, GO, MAGMA, Cell Specificity etc
+  - Script to make sankey plots for DLPFC, HP and CN SCZ risk genes
+  - Script to make binwise PGC3 enrichment scatterplots for networks
+  - Prepare and format data for other visualisations
+* [Enrichment Visualisation.R](enrich_and_plot/Enrichment%20Visualisation.R): 
+  - Script to plot main enrichment plots for SCZ risk modules for all networks
+  - Script to plot GO enrichment plots for SCZ risk modules for all networks
+  - Script to plot TF enrichment plots for SCZ risk modules for all networks
+  - Script to plot other Pathology enrichment plots for SCZ risk modules for all networks
 
 
 ### For the "Cell population enrichment" study:
