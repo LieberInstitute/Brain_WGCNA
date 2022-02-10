@@ -193,5 +193,10 @@ rse_preprocess_step4 = rse_preprocess_step3 %>% purrr::imap(~{
   return(rse)
 })
 
+rse_preprocess_step5 = map(rse_preprocess_step4,~{
+  assays(., withDimnames=FALSE)$exp_quant_normalised  = preprocessCore::normalize.quantiles(assays(.)$logRPKM) #Quantile normalise samples. Ref: http://jtleek.com/genstats/inst/doc/02_05_normalization.html
+  return(.)
+})
+
 setwd("C:\\Users\\Madhur\\OneDrive - Johns Hopkins\\New_Project\\newResults")
 saveRDS(rse_preprocess_step5      , "rse_preprocessed_newproject_redone.rds")         #List of rse object preprocessed (sample and gene outlier removed. Samples and genes matched)
