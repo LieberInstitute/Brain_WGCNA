@@ -1,6 +1,6 @@
 # Brain_WGCNA
 ## Scripts for the WGCNA paper: 
-## *Schizophrenia risk genes converge into shifting co-expression networks across brain development, ageing and brain regions*
+## *A consensus molecular environment of schizophrenia risk genes in shifting co-expression networks across brain development, ageing and brain regions*
 
 ### For the "Regional-coexpression" and "Age-period" studies (NC samples only): 
 * [Code1(NC).R](preprocess/Code1(NC).R): Preprocess tissue rse data
