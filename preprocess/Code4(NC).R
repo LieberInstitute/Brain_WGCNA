@@ -26,7 +26,7 @@ library(furrr)
 options(mc.cores = 3, future.globals.maxSize= 3565158400)
 
 
-setwd("C:/Users/mpariha1/Desktop/upload_to_google_drive/")
+setwd("C:/Users/mpariha1/Desktop/upload_to_google_drive/OneDrive - Johns Hopkins/")
 
 #Reading the list of age-parsed and non-parsed rse-objects
 rse_sva_cleaned_big      = readRDS("results/rse_sva_cleaned_big_noquantile_CellPropclean_GEclean_newcuts_noPCA.rds")
