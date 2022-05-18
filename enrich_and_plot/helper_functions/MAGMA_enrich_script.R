@@ -14,8 +14,8 @@ MAGMA_enrich = function(Net,pathology, Net_name,genemap,target.directory = getwd
   sumstats = grep("\\.use$", list.files(target.directory),value = T)#; sumstats = gsub("\\.use","",sumstats)
   
   ## define kbp windows ########
-  kbp.windows = c("0", "20", "50", "100", "150", "200", "250", "500")
-  kbp.windows = c("35.10","100")
+  kbp.windows = c("0", "20", "35.10", "50", "100", "150", "200", "250", "500")
+  #kbp.windows = c("35.10","100")
   
   ######## Gene-level analysis step preprocess ####
   purrr::map(c("protein.coding","all.biotypes"),~{
