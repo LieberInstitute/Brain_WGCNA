@@ -35,7 +35,7 @@ MAGMA_enrich_preprocess = function(genemap,pathology,target.directory = paste0(g
   ### Main
 
   ## define kbp windows ########
-  kbp.windows = c("0", "20", "50", "100", "150", "200", "250", "500")
+  kbp.windows = c("0", "20", "35.10", "50", "100", "150", "200", "250", "500")
 #  kbp.windows = c("35.10","100")
   
   if(grepl(paste0("annotation\\.step\\.genes\\.annot$"),list.files(output.directory))){ 
