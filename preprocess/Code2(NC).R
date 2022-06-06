@@ -57,6 +57,26 @@ for (l in names(rse_preprocessed)){
   rse.sva.cleaned.big_logRPKM[[l]]    = get.cleaned.obj(rse_preprocessed[[l]], l, protect = 3,  assay.to.clean = "logRPKM")
 }
 
+#Store parsed networks in a separate list()
+rse.sva.cleaned.age.grps = rse.sva.cleaned.big_logRPKM %>% purrr::imap(~{
+  gr = list()
+  
+  for (i in unique(.$Age_grp)){
+   
+    temp = SummarizedExperiment::subset(x = .x, subset = T,
+                                        select = (Age_grp == i))
+    
+    check.shapiro = apply(assays(temp)$ranknorm,1, function(r) shapiro.test(r)$p.value)
+    print(paste0(.y,".",i ," # ",dim(temp)[2]))
+    print(paste0("Non-normal genes (p <0.05) in ranknorm -> age-parsed sets: ", sum(check.shapiro <0.05), " / ",length(check.shapiro)))
+    
+    if (dim(temp)[2] > 0) {gr[[i]] = temp}
+    #print(head(temp))
+  }
+
+  return(gr)
+})
+    
 
 setwd("results/")
 saveRDS(rse.sva.cleaned.age.grps,"rse_sva_cleaned_age_grps_noquantile_Neuclean_GEclean_newcuts_noPCA.rds")
