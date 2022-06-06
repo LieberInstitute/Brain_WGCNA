@@ -29,8 +29,8 @@ options(mc.cores = 3, future.globals.maxSize= 3565158400)
 setwd("C:/Users/mpariha1/Desktop/upload_to_google_drive/OneDrive - Johns Hopkins/")
 
 #Reading the list of age-parsed and non-parsed rse-objects
-rse_sva_cleaned_big      = readRDS("results/rse_sva_cleaned_big_noquantile_CellPropclean_GEclean_newcuts_noPCA.rds")
-rse_sva_cleaned_age_grps = readRDS("results/rse_sva_cleaned_age_grps_noquantile_CellPropclean_GEclean_newcuts_noPCA.rds")
+rse_sva_cleaned_big      = readRDS("results/rse_sva_cleaned_big_noquantile_Neuclean_GEclean_newcuts_noPCA.rds")
+rse_sva_cleaned_age_grps = readRDS("results/rse_sva_cleaned_age_grps_noquantile_Neuclean_GEclean_newcuts_noPCA.rds")
 
 #Reading the metafile with estimated power for each rse-object
 pwr.df = readRDS("results\\noquantile_CellPropclean_GEclean_newcuts_noPCA--neuCells (redone)/soft-thresholding-pwrs_fulltable_noquantile_Neuclean_GEclean_newcuts_noPCA.rds")
