@@ -80,4 +80,4 @@ rse.sva.cleaned.age.grps = rse.sva.cleaned.big_logRPKM %>% purrr::imap(~{
 
 setwd("results/")
 saveRDS(rse.sva.cleaned.age.grps,"rse_sva_cleaned_age_grps_noquantile_Neuclean_GEclean_newcuts_noPCA.rds")
-saveRDS(rse.sva.cleaned.big_logRPKM ,"rse_sva_cleaned_big_noquantile_ Neuclean_GEclean_newcuts_noPCA.rds")
+saveRDS(rse.sva.cleaned.big_logRPKM ,"rse_sva_cleaned_big_noquantile_Neuclean_GEclean_newcuts_noPCA.rds")
