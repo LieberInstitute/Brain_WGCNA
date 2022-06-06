@@ -61,7 +61,7 @@ get_sft_parameters = function(rse, mod, net.type, assay.name, nname){
 }
 
 
-setwd("C:/Users/mpariha1/Desktop/upload_to_google_drive/OneDrive - Johns Hopkins/results/noquantile_CellPropclean_GEclean_newcuts_noPCA--neuCells/")
+setwd("C:/Users/mpariha1/Desktop/upload_to_google_drive/OneDrive - Johns Hopkins/results/noquantile_CellPropclean_GEclean_newcuts_noPCA--neuCells (redone)/")
 
 #Run "WGCNA::pickSoftThreshold" to get estimate of beta for each rse-object 
 #pearson correlation on the ranknorm assay, signed hybrid network
@@ -73,7 +73,7 @@ sft.pearson.shybrid   =  furrr::future_imap(rse_sva_cleaned_full,~ get_sft_param
 future::plan(transparent)
 
 
-setwd("C:/Users/mpariha1/Desktop/upload_to_google_drive/OneDrive - Johns Hopkins/results/noquantile_CellPropclean_GEclean_newcuts_noPCA--neuCells/")
+setwd("C:/Users/mpariha1/Desktop/upload_to_google_drive/OneDrive - Johns Hopkins/results/noquantile_CellPropclean_GEclean_newcuts_noPCA--neuCells (redone)/")
 dir      = getwd()
 ls       = gtools::mixedsort(list.files(dir, pattern = ".rds"))
 obj.name = substring(text = ls,first = 1,last = nchar(ls)-4)
