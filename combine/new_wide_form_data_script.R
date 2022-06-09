@@ -16,6 +16,7 @@ library(purrr)
 library(dplyr)
 library(magrittr)
 
+#Loads wide_form_WGCNA_output(generated in "/combine/prepare_ALL_WGCNA_network_script.R"), Tensor output (@Leonardo), genewise MAGMA scores, gene info
 load("C:\\Users\\mpariha1\\Desktop\\upload_to_google_drive\\OneDrive - Johns Hopkins\\Shared Data\\Network Group\\In progress\\SCZ_gene_importance_network_v3.5.RData")
 
 colnames(WGCNA) = gsub("silver","grey60",colnames(WGCNA))
