@@ -1,5 +1,5 @@
 ###############################################################################################
-#                               Script to generate WGCNA networks and save output             #
+#                       Script to generate WGCNA networks and save output                     #
 #                      "Regional-coexpression" and "Age-period" studies                       #
 #                                   (NC samples only)                                         #
 ###############################################################################################
