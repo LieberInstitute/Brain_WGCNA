@@ -56,7 +56,7 @@ get_networks = function(rse,mod, net.type, assay.name, beta.pwr,pwr.type, nname)
   pwr = unlist(beta.pwr[beta.pwr$tissue_grp == nname & beta.pwr$correlation == mod & beta.pwr$network == net.type, paste0(pwr.type,".pwr")])
   input_matrix = t(assays(rse)[[assay.name]]) #Genes in columns, subjects in rows
   
-  li.args = list(datExpr = input_matrix, randomSeed = 123, verbose = 5, maxBlockSize = 3000,
+  li.args = list(datExpr = input_matrix, randomSeed = 123, verbose = 5, maxBlockSize = 13000,
                  TOMType = "signed", saveTOMs = FALSE, saveTOMFileBase = (nname), power = pwr,
                  minModuleSize = 40,
                  pamStage = TRUE, pamRespectsDendro = TRUE,  deepSplit = 4,                   
