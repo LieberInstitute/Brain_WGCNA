@@ -56,4 +56,4 @@
 
 
 ### Additional data files:
-* [External (Zenodo) link](https://zenodo.org/record/5706100): Interactive Sankey files, wide_form data files etc
+* [External link](https://stemcell.libd.org/brain_wgcna/): Interactive Sankey files, wide_form data files, modulewise SCZ enrichment results etc
