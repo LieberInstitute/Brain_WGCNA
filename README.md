@@ -74,4 +74,6 @@
 
 
 ### Additional data files:
-* [External link](https://stemcell.libd.org/brain_wgcna/): Interactive Sankey files, wide_form data files, modulewise SCZ enrichment results etc
+* [External link](https://nets.libd.org/age_wgcna/): Interactive Sankey files, wide_form data files, modulewise SCZ enrichment results etc
+
+For any data or cdoe inquiries please contact Giulio Pergola: [Giulio.Pergola@libd.org]
