@@ -30,7 +30,9 @@ gnm = gnm[!duplicated(gnm$IID),]
 getRSEdata = function(){
   rse = list()
   load("data_source/NIH_R21/Expression/dlpfc_ribozero_brainseq_phase2_hg38_rseGene_merged_n453.rda")
-  rse$dlpfc.O = rse_gene
+  rse$dlpfc.O = rse_gene #DLPFC ribozero data
+  load("data_source/NIH_R21/Expression/dlpfc_polyA_brainseq_phase1_hg38_rseGene_merged_n732.rda")
+  rse$dlpfc.A = rse_gene  #DLPFC polyA data
   load("data_source/NIH_R21/Expression/hippo_brainseq_phase2_hg38_rseGene_merged_n447.rda")
   rse$hippo   = rse_gene
   load("data_source/FLOURISH/caudate_brainseq_phase3_hg38_rseGene_merged_n464.rda")
@@ -43,6 +45,10 @@ getRSEdata = function(){
 
 #Load all RSE data in a list
 rse_raw_list = getRSEdata()
+
+##For poly.A only keep samples not already present in dlpfc.O
+##Outlier samples removed from DLPFC.O are added back to polyA (retrospective): "R5785"  "R12351" "R12288" "R5865"  "R10424" "R3537". 
+rse_raw_list$dlpfc.A = rse_raw_list$dlpfc.A[,!rse_raw_list$dlpfc.A$BrNum %in% (rse_raw_list$dlpfc.O$BrNum[!colnames(rse_raw_list$dlpfc.O) %in% c("R5785","R12351","R12288","R5865","R10424","R3537")])]
 
 
 #Save gene_map/gene_info for later reference:
@@ -165,7 +171,7 @@ samples_removed              = map(rse_outlier_removed, "removed")
 
 rse_outlier_removed_big = list()
 rse_outlier_removed_big$dlpfc.O  = rse_preprocess_step1$dlpfc.O  [,!colnames(rse_preprocess_step1$dlpfc.O) %in% unique(unlist(samples_removed[grep("dlpfc.O" ,names(samples_removed),value = T)]))]
-#rse_outlier_removed_big$dlpfc.A  = rse_preprocess_step1$dlpfc.A  [,!colnames(rse_preprocess_step1$dlpfc.A) %in% unique(unlist(samples_removed[grep("dlpfc.A" ,names(samples_removed),value = T)]))]
+rse_outlier_removed_big$dlpfc.A  = rse_preprocess_step1$dlpfc.A  [,!colnames(rse_preprocess_step1$dlpfc.A) %in% unique(unlist(samples_removed[grep("dlpfc.A" ,names(samples_removed),value = T)]))]
 rse_outlier_removed_big$hippo    = rse_preprocess_step1$hippo    [,!colnames(rse_preprocess_step1$hippo)   %in% unique(unlist(samples_removed[grep("hippo"   ,names(samples_removed),value = T)]))]
 rse_outlier_removed_big$caudate  = rse_preprocess_step1$caudate  [,!colnames(rse_preprocess_step1$caudate) %in% unique(unlist(samples_removed[grep("caudate" ,names(samples_removed),value = T)]))]
 rse_outlier_removed_big$dentate  = rse_preprocess_step1$dentate  [,!colnames(rse_preprocess_step1$dentate) %in% unique(unlist(samples_removed[grep("dentate" ,names(samples_removed),value = T)]))]
