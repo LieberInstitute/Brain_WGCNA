@@ -60,6 +60,7 @@
 * [sliding_window(Code4,NC).R](sliding_windows/sliding_window(Code4%2CNC).R): Perform WGCNA to obtain sliding window networks on the NC samples
 * [sliding_window(Code4,SCZ).R](sliding_windows/sliding_window(Code4%2CSCZ).R): Perform WGCNA to obtain sliding window networks on the SCZ samples
 * [Enrichments and Visualisation(Sliding Window).R](sliding_windows/enrich_and_plot/Enrichments%20and%20Visualisation(Sliding%20Window).R): Script to plot SCZ enrichment measures for sliding window networks (NC + SCZ)
+* [Visualisation(Sliding Window).R](sliding_windows/enrich_and_plot/Visualisation(Sliding%20Window).R): Script for additional sliding window plots (max.Fold change vs median age with rugs)
 
 
 ### For the iPSC data analysis:
