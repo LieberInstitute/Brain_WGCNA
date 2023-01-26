@@ -73,7 +73,8 @@ sft.pearson.shybrid   =  furrr::future_imap(rse_sva_cleaned_full,~ get_sft_param
 future::plan(transparent)
 
 
-setwd("C:\\Users\\mpariha1\\Desktop\\upload_to_google_drive\\OneDrive - Johns Hopkins\\Paper new analysis\\Revision\\new new beta")dir      = getwd()
+setwd("C:\\Users\\mpariha1\\Desktop\\upload_to_google_drive\\OneDrive - Johns Hopkins\\Paper new analysis\\Revision\\new new beta")
+dir      = getwd()
 ls       = gtools::mixedsort(list.files(dir, pattern = ".rds"))
 obj.name = substring(text = ls,first = 1,last = nchar(ls)-4)
 fp       = file.path(dir,ls)
