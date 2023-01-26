@@ -63,7 +63,7 @@ for (l in names(rse_preprocessed)){
 rse.sva.cleaned.age.grps = samples_removed %>% purrr::imap(~{
   tissue = case_when(
     grepl("dlpfc.O",.y) ~ "dlpfc.O",
- #   grepl("dlpfc.A",.y) ~ "dlpfc.A",
+    grepl("dlpfc.A",.y) ~ "dlpfc.A",
     grepl("hippo"  ,.y) ~ "hippo",
     grepl("caudate",.y) ~ "caudate",
     grepl("dentate",.y) ~ "dentate"
