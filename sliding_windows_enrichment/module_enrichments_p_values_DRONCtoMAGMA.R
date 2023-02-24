@@ -1,3 +1,8 @@
+####################################################################################################
+#           Calculate accross module association of MAGMA enrichment to cell type enrichment       #
+#                                                                                                  #
+####################################################################################################
+
 library(MASS);library(sfsmisc);library(dplyr);library(purrr)
 library(SummarizedExperiment); library(qs);library(ggplot2); library(gridExtra);
 library(pryr); library(tibble); library(furrr); library(tidyr); library(readr)
