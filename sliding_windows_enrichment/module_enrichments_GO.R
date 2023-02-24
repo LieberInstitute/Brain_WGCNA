@@ -1,3 +1,8 @@
+####################################################################################################
+#                          Script to calculate GO term ratio in modules                            #
+#                                                                                                  #
+####################################################################################################
+
 library(dplyr)
 library(purrr)
 library(SummarizedExperiment); library(qs);library(ggplot2); library(gridExtra);library(pryr); library(tibble); library(furrr); library(tidyr); library(readr)
@@ -79,54 +84,3 @@ gi_sw_modenr = imap(gi_sw_networks, ~ {
 })
 
 saveRDS(gi_sw_modenr, file = "results/sw_modenr_over400")
-
-goterm = "GO:0045202_synapse"
-goterm = "GO:0007155_cell_adhesion"
-goterm = "GO:0043005_neuron_projection"  
-goterm = "GO:0008324_cation_transmembrane_transporter_activity" 
-goterm = "GO:0048468_cell_development" 
-
-GO_terms_list = as.list(GO_terms) %>% setNames(.,.)
-pb <- progress::progress_bar$new(total = length(GO_terms_list), format = " [:bar] :current/:total (:percent) eta: :eta", force = TRUE)
-sw_modenrHMAGMA_corr_list = map(GO_terms_list, ~ {
-  goterm = ..1
-  pb$tick()
-  # Sys.sleep(.001)
-  gi_sw_modenrHMAGMA_corr = imap_dbl(gi_sw_modenr, ~ {
-    mod_enr_nogrey = ..1[!rownames(..1) == "grey",]
-    broom::tidy(rlm(-log10(mod_enr_nogrey[["SCZ_HMAGMA"]]) ~ mod_enr_nogrey[["mod_size"]] + mod_enr_nogrey[[goterm]] )) %>% .[grep("goterm",.$term),] %>% pull(statistic)
-    # cell_type = lm(-log10(mod_enr_nogrey$`GO:0007417_central_nervous_system_development`) ~ mod_enr_nogrey$mod_size)$residuals
-    # SCZ_HMAGMA = lm(-log10(mod_enr_nogrey$SCZ_HMAGMA) ~ mod_enr_nogrey$mod_size)$residuals
-    # cor.test(cell_type,SCZ_HMAGMA)
-  })
-})
-
-sw_modenrHMAGMA_corr_list = readRDS( file = "results/sw_modenrHMAGMA_corr_list.rds")
-sw_modenrHMAGMA_corr_list[["median_age"]] = sw_ages
-
-sw_modenrHMAGMA_corr_wide = as.data.frame(sw_modenrHMAGMA_corr_list) %>% rownames_to_column( var = "network") 
-sw_modenrHMAGMA_corr_long = data.table::melt(setDT(sw_modenrHMAGMA_corr_wide), 
-                                 id.vars = c("network","median_age"), 
-                                 variable.name = "GO_term")
-
-sw_modenrHMAGMA_corr = save(sw_modenrHMAGMA_corr_list,sw_modenrHMAGMA_corr_wide,sw_modenrHMAGMA_corr_long
-                            ,file = "results/sw_modenrHMAGMA_corr.RData")
-
-gi_sw_modenrHMAGMA_corr = imap_dbl(gi_sw_modenr, ~ {
-  mod_enr_nogrey = ..1[!rownames(..1) == "grey",]
-  broom::tidy(rlm(-log10(mod_enr_nogrey[["SCZ_HMAGMA"]]) ~ mod_enr_nogrey[["mod_size"]] + mod_enr_nogrey[[goterm]] )) %>% .[grep("goterm",.$term),] %>% pull(statistic)
-  # cell_type = lm(-log10(mod_enr_nogrey$`GO:0007417_central_nervous_system_development`) ~ mod_enr_nogrey$mod_size)$residuals
-  # SCZ_HMAGMA = lm(-log10(mod_enr_nogrey$SCZ_HMAGMA) ~ mod_enr_nogrey$mod_size)$residuals
-  # cor.test(cell_type,SCZ_HMAGMA)
-})
-tissue = "NC.hippo"
-indices = grep(tissue, names(gi_sw_networks)) 
-plot(sw_ages[indices],gi_sw_modenrHMAGMA_corr[indices])
-
-mod_enr_nogrey[mod_enr_nogrey == 0] = min(mod_enr_nogrey[!mod_enr_nogrey == 0])
-
-mod_enr_nogrey = gi_sw_modenr[[50]]
-cell_type = mod_enr_nogrey$`GO:0007417_central_nervous_system_development`
-SCZ_HMAGMA = lm(-log10(mod_enr_nogrey$SCZ_HMAGMA) ~ mod_enr_nogrey$mod_size)$residuals
-cor.test(cell_type,SCZ_HMAGMA, method = "kendall")
-plot(cell_type, SCZ_HMAGMA)
