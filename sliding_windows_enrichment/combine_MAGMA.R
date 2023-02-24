@@ -1,3 +1,8 @@
+####################################################################################################
+#             Add MAGMA module enrichments to GO and DRONC celltype enrichment dataframes          #
+#                                                                                                  #
+####################################################################################################
+
 library(dplyr)
 library(purrr)
 library(SummarizedExperiment); library(qs);library(ggplot2); library(gridExtra);library(pryr); library(tibble); library(furrr); library(tidyr); library(readr)
