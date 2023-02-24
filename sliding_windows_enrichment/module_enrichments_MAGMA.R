@@ -1,3 +1,8 @@
+####################################################################################################
+#             Script to calculate encrichment of MAGMA for each module using genesettest           #
+#                                                                                                  #
+####################################################################################################
+
 library(dplyr)
 library(purrr)
 library(SummarizedExperiment); library(qs);library(ggplot2); library(gridExtra);library(pryr); library(tibble); library(furrr); library(tidyr); library(readr)
@@ -72,7 +77,4 @@ gi_sw_modenr = imap(gi_sw_networks, ~ {
 })
 
 saveRDS(gi_sw_modenr,"results/sw_MAGMA.rds")
-
-save(sw_modenrHMAGMA_corr_list,sw_modenrHMAGMA_corr_wide,sw_modenrHMAGMA_corr_long
-     ,file = "results/sw_modenrHMAGMA_DRONCmedians_corr.RData")
 
