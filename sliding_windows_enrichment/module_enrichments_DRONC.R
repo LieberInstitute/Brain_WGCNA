@@ -1,3 +1,8 @@
+####################################################################################################
+#       Script to calculate encrichment of DRONC celltypes for each module using genesettest       #
+#                                                                                                  #
+####################################################################################################
+
 library(dplyr)
 library(purrr)
 library(SummarizedExperiment); library(qs);library(ggplot2); library(gridExtra);library(pryr); library(tibble); library(furrr); library(tidyr); library(readr)
@@ -72,55 +77,3 @@ gi_sw_modenr = imap(gi_sw_networks, ~ {
 })
 
 saveRDS(gi_sw_modenr, file = "results/sw_genesettest_celltype_wMAGMA.rds")
-
-DRONC_types_list = as.list(DRONC_types) %>% setNames(.,.)
-pb <- progress::progress_bar$new(total = length(DRONC_types_list), format = " [:bar] :current/:total (:percent) eta: :eta", force = TRUE)
-sw_modenrHMAGMA_corr_list = map(DRONC_types_list, ~ {
-  cell_type = ..1
-  pb$tick()
-  # Sys.sleep(.001)
-  gi_sw_modenrHMAGMA_corr = imap_dbl(gi_sw_modenr, ~ {
-    mod_enr_nogrey = ..1[!rownames(..1) == "grey",]
-    log10celltype = -log10(mod_enr_nogrey[[cell_type]])
-    # print(log10celltype)
-    log10celltype[log10celltype==Inf] = max(log10celltype[!log10celltype==Inf])
-    broom::tidy(rlm(-log10(mod_enr_nogrey[["SCZ_HMAGMA"]]) ~ mod_enr_nogrey[["mod_size"]] + log10celltype )) %>% .[grep("log10celltype",.$term),] %>% pull(statistic)
-
-  })
-})
-sw_modenrHMAGMA_corr_list[["median_age"]] = sw_ages
-
-sw_modenrHMAGMA_corr_wide = as.data.frame(sw_modenrHMAGMA_corr_list) %>% rownames_to_column( var = "network") 
-sw_modenrHMAGMA_corr_long = data.table::melt(setDT(sw_modenrHMAGMA_corr_wide), 
-                                             id.vars = c("network","median_age"), 
-                                             variable.name = "GO_term")
-
-save(sw_modenrHMAGMA_corr_list,sw_modenrHMAGMA_corr_wide,sw_modenrHMAGMA_corr_long
-                            ,file = "results/sw_modenrHMAGMA_DRONC_corr.RData")
-
-
-cell_type = "exCA"
-test = gi_sw_modenr[[1]]
-gi_sw_modenrHMAGMA_corr = imap_dbl(gi_sw_modenr, ~ {
-  mod_enr_nogrey = ..1[!rownames(..1) == "grey",]
-  log10celltype = -log10(mod_enr_nogrey[[cell_type]])
-  # print(log10celltype)
-  log10celltype[log10celltype==Inf] = max(log10celltype[!log10celltype==Inf])
-  broom::tidy(rlm(-log10(mod_enr_nogrey[["SCZ_HMAGMA"]]) ~ mod_enr_nogrey[["mod_size"]] + log10celltype )) %>% .[grep("log10celltype",.$term),] %>% pull(statistic)
-  # cell_type = lm(-log10(mod_enr_nogrey$`GO:0007417_central_nervous_system_development`) ~ mod_enr_nogrey$mod_size)$residuals
-  # SCZ_HMAGMA = lm(-log10(mod_enr_nogrey$SCZ_HMAGMA) ~ mod_enr_nogrey$mod_size)$residuals
-  # cor.test(cell_type,SCZ_HMAGMA)
-})
-
-tissue = "NC.dentate"
-indices = grep(tissue, names(gi_sw_networks)) 
-plot(sw_ages[indices],gi_sw_modenrHMAGMA_corr[indices])
-
-
-mod_enr_nogrey[mod_enr_nogrey == 0] = min(mod_enr_nogrey[!mod_enr_nogrey == 0])
-
-cell_type = lm(-log10(mod_enr_nogrey$GABA) ~ mod_enr_nogrey$mod_size)$residuals
-SCZ_HMAGMA = lm(-log10(mod_enr_nogrey$SCZ_HMAGMA) ~ mod_enr_nogrey$mod_size)$residuals
-
-plot(cell_type, SCZ_HMAGMA)
-cor.test(cell_type, SCZ_HMAGMA, method = "kendall")
