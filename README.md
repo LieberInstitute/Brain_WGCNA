@@ -1,6 +1,6 @@
 # Brain_WGCNA
 ## Scripts for the WGCNA paper: 
-## *Consensus molecular environment of schizophrenia risk genes in co-expression networks shifting across brain development, age and brain region*
+## *Consensus molecular environment of schizophrenia risk genes in co-expression networks shifting across age and brain regions*
 
 ### Updated scripts according to manuscript revision for the "Regional-coexpression" and "Age-period" studies (NC samples only):
 * [revision_script1.R](revision/preprocess/revision_script1.R): Preprocess tissue rse data
