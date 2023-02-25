@@ -22,7 +22,7 @@
   - Script to plot TF enrichment plots for SCZ risk modules for all networks
   - Script to plot other Pathology enrichment plots for SCZ risk modules for all networks
 
-### Scripts for the Machine Learning model:
+### Scripts for the "MAGMA prediction model":
 * [MAGMA_prediction.py](MLcode/MAGMA_prediction.py): Code to perfrom ML MAGMA prediction for Age-parsed and non-parsed networks
 
 ### Scripts for the "Cell population enrichment" study:
