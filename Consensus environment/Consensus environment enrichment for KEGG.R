@@ -7,7 +7,7 @@
 #                  Script to make binwise PGC3 enrichment scatterplots for networks.               #
 #                                                                                                  #
 #                          Prepare and format data for other visualisations                        #
-#           "Regional-coexpression", "Age-period" and "Cell-population enrichment" studies         #
+#                                "Consensus Environment " plots                                    #
 #                                                                                                  #
 ####################################################################################################
 
