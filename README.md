@@ -53,7 +53,17 @@
 * [stemcell(Code4)[noKO].R](stemcells/stemcell(Code4)%5BnoKO%5D.R): Perform WGCNA to obtain iPSC networks [noKO]
 * [Enrichment and Visualisation (stemcells).R](stemcells/enrich_and_plot/Enrichment%20and%20Visualisation%20(stemcells).R): Script to plot enrichment in PGC lists vs enrichment in consensus list for the iPSC networks [noKO and shuffled/KO]
 
+### Scripts for the "Consensus environment":
+* [Consensus environment enrichment for GO and SCZ.R](Consensus%20environment/Consensus%20environment%20enrichment%20for%20GO%20and%20SCZ.R): Run GO and SCZ enrichments on consensus gene environment
+* [Consensus environment enrichment for KEGG.R](Consensus%20environment/Consensus%20environment%20enrichment%20for%20KEGG.R): Run KEGG enrichment on consensus gene environment
 
+### Scripts for the "sliding_windows_enrichment":
+* [module_enrichments_MAGMA.R](sliding_windows_enrichment/module_enrichments_MAGMA.R): Calculate enrichment of MAGMA per module using genesettest 
+* [module_enrichments_DRONC.R](sliding_windows_enrichment/module_enrichments_DRONC.R): Calculate enrichment of DRONC celltypes per module using genesettest 
+* [module_enrichments_GO.R](sliding_windows_enrichment/module_enrichments_GO.R): Calculate GO term ratio per module
+* [combine_MAGMA.R](sliding_windows_enrichment/combine_MAGMA.R): Add MAGMA module enrichments to GO term ratio and DRONC celltype enrichment dataframes 
+* [module_enrichments_p_values_DRONCtoMAGMA.R](sliding_windows_enrichment/module_enrichments_p_values_DRONCtoMAGMA.R): Calculate across module association of MAGMA enrichment to cell type enrichment
+* [module_enrichments_p_values_GOtoMAGMA.R](sliding_windows_enrichment/module_enrichments_p_values_GOtoMAGMA.R): Calculate across module association of MAGMA enrichment to GO term ratio
 
 ### Additional links:
 * [Zenodo](https://doi.org/10.5281/zenodo.5676480): Interactive Sankey files, wide_form data files, modulewise SCZ enrichment results, preprocessed data files etc
