@@ -1,3 +1,10 @@
+###############################################################################################
+#                          Script for additional sliding window plots                         #
+#                                     "Sliding window" study                                  #
+#                                        (NC+SCZ samples)                                     #
+###############################################################################################
+
+
 library(tidyverse)
 #library(patchwork)
 library(scales)
