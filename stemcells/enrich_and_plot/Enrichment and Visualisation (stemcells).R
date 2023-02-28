@@ -2,7 +2,7 @@
 # Script to plot enrichment in PGC lists vs enrichment in consensus list in stemcell networks #
 #                                iPSC data[noKO+shuffle/KO]                                   #
 ###############################################################################################
-
+## Update: The shuffle/KO analysis has beeen replaced with permutation tests and this script is used only for noKO enrichment in the manuscript. 
 
 Enrich = function(ll.target, ll.components, ll.components.size, network_name, target_name){
   ###ll.components.size argument is not needed
@@ -140,7 +140,7 @@ li_final = c(ne$PGC3.all.biotypes, consensus = list(li_new$consensus_noPGC), MAG
 ##Mega gene list: All networks + stem cell protectDx + stem cell protectDx shuffled
 gm <- c(readRDS("C:/Users/mpariha1/Desktop/upload_to_google_drive/OneDrive - Johns Hopkins/Shared Data/Giulio's ML code/Enrichments/grch38[PGC125new]/gene-module list (wide_form_test) (all networks)[grch38].rds"),
         readRDS("C:/Users/mpariha1/Desktop/upload_to_google_drive/OneDrive - Johns Hopkins/Stem_Cell_Project_2021/redone/results/gene-module list(stem cells)_protectDx(redone).rds"),
-        readRDS("C:/Users/mpariha1/Desktop/upload_to_google_drive/OneDrive - Johns Hopkins/Stem_Cell_Project_2021/redone/results/KO sft estimation shuffeled/KO nets/gene-module list(stem cells)_protectDx_KOsims(redone).rds")
+        readRDS("C:/Users/mpariha1/Desktop/upload_to_google_drive/OneDrive - Johns Hopkins/Stem_Cell_Project_2021/redone/results/KO sft estimation shuffeled/KO nets/gene-module list(stem cells)_protectDx_KOsims(redone).rds")  ####This analysis has been replaced with permutation analysis in the manuscript and this genelist is not used subsequently. 
         )
 gm                               = gm[!grepl("pwr15",names(gm))]
 names(gm)                        = gsub("\\(redone\\)","",names(gm))
