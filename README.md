@@ -1,6 +1,7 @@
 # Brain_WGCNA
 ## Scripts for the manuscript: 
 ## *Consensus molecular environment of schizophrenia risk genes in co-expression networks shifting across age and brain regions*
+"Giulio Pergola et al. ,Consensus molecular environment of schizophrenia risk genes in coexpression networks shifting across age and brain regions.Sci. Adv.9, eade2812(2023).DOI:10.1126/sciadv.ade2812"
 
 ### Scripts for the "Fixed-windows" and "Sliding-windows" studies (NC samples only):
 * [Code1(NC).R](revision/preprocess/revision_script1.R): Preprocess tissue rse data for NC samples
