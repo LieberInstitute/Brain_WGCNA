@@ -74,4 +74,4 @@
 * [Zenodo](https://doi.org/10.5281/zenodo.5676480): Interactive Sankey files, wide_form data files, modulewise SCZ enrichment results, preprocessed data files etc
 * [NETS@LIBD](https://nets.libd.org/age_wgcna/): Future project updates and general updates of our research group at Lieber Institute for Brain Development will be available here.
 
-For any data or code inquiries please contact Giulio Pergola: [Giulio.Pergola@libd.org]
+For any data or code inquiries please contact Giulio Pergola: [Giulio.Pergola@libd.org] [https://www.libd.org/team/giulio-pergola-phd/]
