@@ -68,7 +68,7 @@
 * [Consensus environment enrichment for KEGG.R](Consensus%20environment/Consensus%20environment%20enrichment%20for%20KEGG.R): Run KEGG enrichment on consensus gene environment
 
 ### Uncategorized scripts:
-* [Miscellenous scripts](misc/scripts/): Consensus genes computation, Jaccard index calculations etc
+* [Miscellenous scripts](misc/scripts/): Consensus genes computation, the Jaccard index calculations etc
 
 ### Additional links:
 * [Zenodo](https://doi.org/10.5281/zenodo.5676480): Interactive Sankey files, wide_form data files, modulewise SCZ enrichment results, preprocessed data files etc
